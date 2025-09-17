@@ -20,15 +20,15 @@ Lors de l'exportation depuis Burp Suite, assurez-vous de désactiver l'option d'
 ### 2. Exporter le fichier
 
 1. Dans Burp Suite, allez dans l'onglet "Target" ou "Proxy" selon ce que vous voulez exporter
-2. Faites un clic droit sur les éléments que vous souhaitez exporter
-3. Sélectionnez "Save items" ou "Export" selon votre version de Burp Suite
+2. Faites un clic droit sur les éléments que vous souhaitez exporter (de préférence, un dossier)
+3. Sélectionnez "Save selected items" ou "Export" selon votre version de Burp Suite
 4. Choisissez un format (XML ou TXT)
 5. **Décochez l'option "Base64-encode items"**
 6. Enregistrez le fichier
 
 ### 3. Renommer le fichier
 
-Après avoir exporté le fichier, vous devez le renommer avec l'extension appropriée :
+Après avoir exporté le fichier, vous pouvez le renommer avec l'extension appropriée :
 
 - Si vous avez exporté en format texte : renommez le fichier avec l'extension `.txt`
 - Si vous avez exporté en format XML : renommez le fichier avec l'extension `.xml`
