@@ -37,14 +37,45 @@ PostmanCollectionFromBurp est un outil qui permet de convertir les données expo
 
 ## 🔧 Installation
 
-1. Clonez ce dépôt :
+1. **Clonez ce dépôt** :
 ```bash
 git clone https://github.com/Alane38/PostmanCollectionFromBurp.git
 ```
 
-2. Accédez au répertoire du projet :
+2. **Accédez au répertoire du projet** :
 ```bash
 cd PostmanCollectionFromBurp
+```
+
+3. **Création de l'environnement virtuel (Linux/macOS)** :
+
+Pour isoler les dépendances du projet, il est recommandé de créer un environnement virtuel Python :
+```bash
+# Créer un environnement virtuel
+python3 -m venv .venv
+
+# Activer l'environnement virtuel
+source .venv/bin/activate
+
+# Installer les dépendances dans l'environnement virtuel
+pip install -r requirements.txt
+```
+
+4. **Pour les utilisateurs Windows** :
+```powershell
+# Créer un environnement virtuel
+python -m venv .venv
+
+# Activer l'environnement virtuel
+.\.venv\Scripts\activate
+
+# Installer les dépendances
+pip install -r requirements.txt
+```
+
+5. **Désactiver l'environnement virtuel** (quand vous avez terminé) :
+```bash
+deactivate
 ```
 
 ## 📤 Exportation depuis Burp Suite
