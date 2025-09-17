@@ -4,6 +4,7 @@ import urllib.parse as urlparse
 import xml.etree.ElementTree as ET
 import os
 import sys
+import re
 from pathlib import Path
 
 def ensure_folder(items_list, folder_path):
@@ -20,14 +21,29 @@ def ensure_folder(items_list, folder_path):
         items_list = found["item"]
     return items_list
 
+def is_base64(s):
+    """Check if a string is Base64 encoded."""
+    return re.match('^[A-Za-z0-9+/]+={0,2}$', s) is not None
+
 def parse_raw_request(b64text):
     if not b64text:
         return "", []
-    raw = base64.b64decode(b64text).decode(errors="ignore")
+
+    # Check if the content is Base64 encoded
+    if is_base64(b64text):
+        try:
+            raw = base64.b64decode(b64text).decode(errors="ignore")
+        except UnicodeDecodeError:
+            # If decoding fails, treat as plain text
+            raw = b64text
+    else:
+        raw = b64text
+
     if "\r\n\r\n" in raw:
         header_blob, body = raw.split("\r\n\r\n", 1)
     else:
         header_blob, body = raw, ""
+
     header_lines = header_blob.split("\r\n")
     headers = []
     for line in header_lines[1:]:
@@ -104,7 +120,7 @@ def main():
         folder_path = [host] + path_segments[:-1] if path_segments else [host]
         target_list = ensure_folder(collection["item"], folder_path)
         last_seg = path_segments[-1] if path_segments else "/"
-        name = f"{method} {last_seg}"
+        name = f"{last_seg}"
         pm_request = {
             "name": name,
             "request": {
