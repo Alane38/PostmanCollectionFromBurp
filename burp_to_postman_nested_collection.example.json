@@ -1,0 +1,48 @@
+{
+  "info": {
+    "name": "Burp Export (trié par hôte / chemins) - Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "www.xxxxxxxxxxx.com",
+      "item": [
+        {
+          "name": "gtag",
+          "item": [
+            {
+              "name": "GET js",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://www.xxxxxxxxxxx.com/gtag/js?l=dataLayer&id=G-xxxxxxxxxxx",
+                  "protocol": "https",
+                  "host": [
+                    "www",
+                    "xxxxxxxxxxx",
+                    "com"
+                  ],
+                  "path": [
+                    "gtag",
+                    "js"
+                  ],
+                  "query": [
+                    {
+                      "key": "l",
+                      "value": "dataLayer"
+                    },
+                    {
+                      "key": "id",
+                      "value": "G-xxxxxxxxxxx"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

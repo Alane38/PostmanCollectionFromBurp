@@ -1,0 +1,81 @@
+<?xml version="1.1"?>
+<!-- NOTE: Any NULL bytes in requests and responses are preserved within this output, even though
+this strictly breaks the XML syntax. If your XML parser rejects the NULL bytes then you will need
+to
+remove or replace these bytes before parsing. Alternatively, you can use the option to
+base64-encode
+requests and responses. -->
+<!DOCTYPE items [
+  <!ELEMENT items (item*)>
+  <!ATTLIST items burpVersion CDATA "">
+  <!ATTLIST items exportTime CDATA "">
+  <!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+  <!ELEMENT time (#PCDATA)>
+  <!ELEMENT url (#PCDATA)>
+  <!ELEMENT host (#PCDATA)>
+  <!ATTLIST host ip CDATA "">
+  <!ELEMENT port (#PCDATA)>
+  <!ELEMENT protocol (#PCDATA)>
+  <!ELEMENT method (#PCDATA)>
+  <!ELEMENT path (#PCDATA)>
+  <!ELEMENT extension (#PCDATA)>
+  <!ELEMENT request (#PCDATA)>
+  <!ATTLIST request base64 (true|false) "false">
+  <!ELEMENT status (#PCDATA)>
+  <!ELEMENT responselength (#PCDATA)>
+  <!ELEMENT mimetype (#PCDATA)>
+  <!ELEMENT response (#PCDATA)>
+  <!ATTLIST response base64 (true|false) "false">
+  <!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="2025.0.0" exportTime="2025">
+  <item>
+    <time>2025</time>
+    <url><![CDATA[https://www.xxxxxxxxxxx.com/gtag/js?l=dataLayer&id=G-xxxxxxxxxxx]]></url>
+    <host ip="xxx.xxx.xx.xx">www.xxxxxxxxxxx.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/gtag/js?l=dataLayer&id=G-XXXXXX]]></path>
+    <extension>null</extension>
+    <request base64="false">
+      <![CDATA[GET /gtag/js?l=dataLayer&id=G-XXXXXX HTTP/2
+        Host: www.xxxxxxxxxxx.com
+        Sec-Ch-Ua-Platform: "xx"
+        Accept-Language: en-US,en;q=0.6
+        Sec-Ch-Ua: "Not=A?Brand";v="xx", "Chromium";v="xxx"
+        User-Agent: Mozilla/2.0
+        Sec-Ch-Ua-Mobile: ?0
+        Accept: */*
+        Sec-Fetch-Site: cross-site
+        Sec-Fetch-Mode: no-cors
+        Sec-Fetch-Dest: script
+        Sec-Fetch-Storage-Access: active
+        Referer: https://xxxxx.xxx/
+        Accept-Encoding: gzip, deflate, br
+      ]]>
+    </request>
+    <status>200</status>
+    <responselength>XXXXXX</responselength>
+    <mimetype>script</mimetype>
+    <response base64="false">
+      <![CDATA[HTTP/2 200 OK
+        Content-Type: application/javascript; charset=UTF-8
+        Access-Control-Allow-Origin: *
+        Access-Control-Allow-Credentials: true
+        Access-Control-Allow-Headers: Cache-Control
+        Vary: Accept-Encoding
+        Date: 2025 GMT
+        Expires: 2025 GMT
+        Cache-Control: private, max-age=xxx
+        Strict-Transport-Security: max-age=xxxx; includeSubDomains
+        Cross-Origin-Resource-Policy: cross-origin
+        Server: Google Tag Manager
+        Content-Length: xxxxx
+        X-Xss-Protection: 0
+        Alt-Svc: h3=":xxx"; ma=xxxx,h3-xx=":xxx"; ma=xxx
+      ]]>
+    </response>
+    <comment></comment>
+  </item>
+</items>
