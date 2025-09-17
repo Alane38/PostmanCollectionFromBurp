@@ -33,20 +33,6 @@ Après avoir exporté le fichier, vous devez le renommer avec l'extension approp
 - Si vous avez exporté en format texte : renommez le fichier avec l'extension `.txt`
 - Si vous avez exporté en format XML : renommez le fichier avec l'extension `.xml`
 
-## Utilisation avec le script
-
-Une fois que vous avez votre fichier correctement exporté et renommé, vous pouvez l'utiliser avec le script :
-
-```bash
-python main.py votre_fichier.txt
-```
-
-ou
-
-```bash
-python main.py votre_fichier.xml
-```
-
 ## Dépannage
 
 Si vous rencontrez des erreurs :

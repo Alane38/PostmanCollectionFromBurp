@@ -15,7 +15,7 @@ Un outil pour convertir les exports de Burp Suite en collections Postman, facili
   - [🚀 Utilisation](#-utilisation)
   - [📂 Exemples](#-exemples)
   - [🤝 Contribution](#-contribution)
-  - [📜 Licence](#-licence)
+  - [📄 Licence](#-licence)
 
 ## 📝 Description
 
@@ -39,17 +39,12 @@ PostmanCollectionFromBurp est un outil qui permet de convertir les données expo
 
 1. Clonez ce dépôt :
 ```bash
-git clone https://github.com/votre-utilisateur/PostmanCollectionFromBurp.git
+git clone https://github.com/Alane38/PostmanCollectionFromBurp.git
 ```
 
 2. Accédez au répertoire du projet :
 ```bash
 cd PostmanCollectionFromBurp
-```
-
-3. Installez les dépendances :
-```bash
-pip install -r requirements.txt
 ```
 
 ## 📤 Exportation depuis Burp Suite
@@ -73,38 +68,46 @@ Pour utiliser ce script, vous devez d'abord exporter vos données depuis Burp Su
 ## 🚀 Utilisation
 
 Pour convertir un fichier exporté depuis Burp Suite en collection Postman :
-
 ```bash
 python main.py chemin/vers/votre_fichier.txt
 ```
 
 ou pour un fichier XML :
-
 ```bash
 python main.py chemin/vers/votre_fichier.xml
 ```
 
+Le script générera un fichier de collection Postman que vous pourrez importer directement dans Postman.
+
 ## 📂 Exemples
 
-Voici un exemple de structure de fichier exporté depuis Burp Suite :
+Voici quelques exemples d'utilisation :
 
+1. Conversion du fichier XML par défaut :
+```bash
+python main.py exports/burp_export
 ```
-GET /api/users HTTP/1.1
-Host: example.com
-User-Agent: Mozilla/5.0
+
+2. Conversion d'un fichier texte :
+```bash
+python main.py exports/burp_export.txt output/postman_collection.json
+```
+
+1. Conversion d'un fichier XML avec un nom de collection spécifique :
+```bash
+python main.py exports/burp_export.xml output/ma_collection.json
 ```
 
 ## 🤝 Contribution
 
-Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
+Les contributions sont les bienvenues ! Voici comment vous pouvez contribuer :
 
 1. Fork le projet
 2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
-3. Commitez vos changements (`git commit -m 'Add some AmazingFeature'`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
 4. Poussez vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrez une Pull Request
 
-## 📜 Licence
+## 📄 Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
